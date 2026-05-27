@@ -14,14 +14,12 @@ const listEl = document.querySelector(".countries");
 let search = "";
 
 function getCountry(search) {
-  return fetch(`https://restcountries.com/v3.1/name/${search}`).then((res) => res.json())
+  return fetch(`https://restcountries.com/v3.1/name/${search}`).then(res => res.json())
 }
 
-inputEl.addEventListener(
-  "input",
-  debounce((e) => {
+inputEl.addEventListener("input", debounce((e) => {
     search = e.target.value.trim().toLowerCase();
-
+    
     getCountry(search).then((res) => {
       if (res.length > 10) {
         alert({
