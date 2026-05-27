@@ -14,9 +14,7 @@ const listEl = document.querySelector(".countries");
 let search = "";
 
 function getCountry(search) {
-  return fetch(`https://restcountries.com/v3.1/name/${search}`).then((res) =>
-    res.json(),
-  );
+  return fetch(`https://restcountries.com/v3.1/name/${search}`).then((res) => res.json())
 }
 
 inputEl.addEventListener(
@@ -60,9 +58,9 @@ function uploadCountry(arr) {
       return `<li>
                     <h2>${elem.name.common}</h2>
                     <img src="${elem.flags.png}" alt="${elem.flags.alt}">
-                    <p>Столиця: ${elem.capital}</p>
-                    <p>Населення: ${elem.population}</p>
-                    <p>Мови на яких там розмовляють: ${languages}</p>
+                    <p>Capital: ${elem.capital}</p>
+                    <p>Population: ${elem.population}</p>
+                    <p>Official language: ${languages}</p>
                 </li>`;
     })
     .join("");
