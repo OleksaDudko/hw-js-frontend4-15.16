@@ -759,9 +759,9 @@ function uploadCountry(arr) {
         return `<li>
                     <h2>${elem.name.common}</h2>
                     <img src="${elem.flags.png}" alt="${elem.flags.alt}">
-                    <p>\u{421}\u{442}\u{43E}\u{43B}\u{438}\u{446}\u{44F}: ${elem.capital}</p>
-                    <p>\u{41D}\u{430}\u{441}\u{435}\u{43B}\u{435}\u{43D}\u{43D}\u{44F}: ${elem.population}</p>
-                    <p>\u{41C}\u{43E}\u{432}\u{438} \u{43D}\u{430} \u{44F}\u{43A}\u{438}\u{445} \u{442}\u{430}\u{43C} \u{440}\u{43E}\u{437}\u{43C}\u{43E}\u{432}\u{43B}\u{44F}\u{44E}\u{442}\u{44C}: ${languages}</p>
+                    <p>Capital: ${elem.capital}</p>
+                    <p>Population: ${elem.population}</p>
+                    <p>Official language: ${languages}</p>
                 </li>`;
     }).join("");
     listEl.innerHTML = item;
